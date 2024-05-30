@@ -1,6 +1,7 @@
 package com.springboot.demo.rest;
 
 import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.result.InsertOneResult;
@@ -9,6 +10,8 @@ import org.bson.Document;
 import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -68,3 +71,34 @@ public class PersonRepository {
         return collection.deleteOne(filter).getDeletedCount();
     }
 }
+
+/*
+// this is also one way to connect mongo server
+private final MongoClient mongoClient;
+
+private final MongoCollection<Document> collection;
+
+@Value("${spring.data.mongodb.database}")
+private String database;
+
+String connectionString = "mongodb://localhost:27017";
+
+
+public EmployeeDAO(MongoClient mongoClient, MongoCollection<Document> collection) {
+    this.mongoClient = mongoClient;
+    this.collection = collection;
+}
+
+
+public ResponseEntity<?> createConnection(String connectionString){
+    try {
+        MongoClients.create(connectionString);
+        MongoDatabase db = mongoClient.getDatabase(database);
+        return ResponseEntity.ok("Connected to MongoDB successfully.");
+    }catch (Exception e) {
+        e.printStackTrace();
+        return ResponseEntity.internalServerError().body("Failed to connect to MongoDB: " + e.getMessage());
+    }
+}
+*/
+
