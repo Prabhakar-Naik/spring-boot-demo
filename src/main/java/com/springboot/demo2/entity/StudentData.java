@@ -1,4 +1,4 @@
-package com.springboot.demo1.pojo;
+package com.springboot.demo2.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,15 +7,18 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Setter
-@Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@Setter
+@Getter
 @Document
-public class Employee {
+public class StudentData {
+
     @Id
-    private String empId;
-    private String empName;
+    private String id;
+    private String name;
+    private String standard;
     private String address;
-    private double salary;
+    private String fatherName;
+    private String fatherPhone;
 }
