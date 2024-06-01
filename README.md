@@ -2,6 +2,8 @@
 spring-boot-demo
 # Project Description for spring-boot-demo:
 
+<p>The spring-boot-demo project is a comprehensive example application that showcases three different modules, each demonstrating unique aspects of Spring Boot code implementation. These modules might include examples such as RESTful API development, database integration with Spring Data JPA, and messaging with Spring Cloud Stream. By exploring these modules, developers can gain practical insights into building robust, scalable applications using various Spring Boot features and best practices.</p>
+
 <h3> demo </h3>
 <h4>low-level CRUD Operations with MongoClient</h4>
 This Spring Boot demo project demonstrates a <h4>low-level implementation of CRUD operations using MongoClient.</h4> It showcases custom code for connecting to a MongoDB database and performing Create, Read, Update, and Delete operations on data collections. The project serves as an example of integrating MongoDB with a Spring Boot application without relying on higher-level abstractions like Spring Data MongoDB.
