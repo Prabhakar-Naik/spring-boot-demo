@@ -1,5 +1,6 @@
 # spring-boot-demo
-spring-boot-demo
+
+
 # Project Description for spring-boot-demo:
 
 <p>The spring-boot-demo project is a comprehensive example application that showcases three different modules, each demonstrating unique aspects of Spring Boot code implementation. These modules might include examples such as RESTful API development, database integration with Spring Data JPA, and messaging with Spring Cloud Stream. By exploring these modules, developers can gain practical insights into building robust, scalable applications using various Spring Boot features and best practices.</p>
