@@ -18,4 +18,5 @@ public class Employee {
     private String empName;
     private String address;
     private double salary;
+
 }
